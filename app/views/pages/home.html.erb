@@ -1,0 +1,9 @@
+<h1>HOME</h1>
+
+<%= form_for :property, url: properties_path, method: :post do |f| %>
+  <%= f.label :city, "City:" %>
+  <%= f.select :city, Expert::CITIES %>
+  <%= f.label :price, "Price:" %>
+  <%= f.number_field :price %>
+  <%= f.submit "Valider" %>
+<% end %>
